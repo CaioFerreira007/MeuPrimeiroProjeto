@@ -29,6 +29,7 @@
 body{
   color: var(--text-color);
   background-image: var(--bg-url);
+  height: 100vh;
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -190,7 +191,14 @@ body{
 
  }
 
-
+ @media (min-width: 700px){
+  :root{
+    --bg-url: url(bg-desktop.jpg);
+  }
+  .light {
+    --bg-url: url(bg-desktop-light.jpg);
+  }  
+  }
 
 
 
