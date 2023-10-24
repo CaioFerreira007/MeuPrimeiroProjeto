@@ -90,15 +90,21 @@ body{
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+  animation: slide-back 0.3s ;
  
 }
 
 .light #switch button{
-  right: 0;
-  left: initial;
+  animation: slide-in 0.3s forwards;
 }
 
+#switch button:hover{
 
+  outline: 8px solid var(--highlight-color);
+
+
+
+}
 
 #switch span{
     display: block ;
@@ -200,7 +206,23 @@ body{
   }  
   }
 
+@keyframes slide-in {
+  from{
+    left: 0;
+  }
+  to{
+    left: 50%;
+  }
+}
 
+@keyframes slide-back {
+  from{
+    left: 50%;
+  }
+  to{
+    left: 0;
+  }
+}
 
 
 
